@@ -1,0 +1,8 @@
+<div class="card m-5" style="width: 18rem;" *ngIf="auth.user$ | async as user">
+    <img class="img-thumbnail card-img-top" [src]="user.picture" alt="Foto">
+    <div class="card-body">
+        <p class="card-text">Name: {{ user.given_name }}</p>
+        <p class="card-text">Last Name: {{ user.family_name }}</p>
+        <p class="card-text">Email: {{ user.email }}</p>
+    </div>
+</div>
